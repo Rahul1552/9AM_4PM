@@ -1,0 +1,198 @@
+# explain indentation
+# how is body defined inside the IF
+# hierarchy is defined using INDENTATION
+
+# if age > 18: 
+# print("You can vote") #IndentationError will be there
+
+# by default after if the next line will start with one indent
+
+
+# if age > 18: # this has to be true
+#     pass
+
+# print("You can vote") # this is now not part of if , so will be exceuted
+
+
+# if ...else
+
+# if the condition is false we need some output to show
+
+
+if age > 18: # this has to be true
+    print("You can vote")
+else:
+    print("You can't vote") # this is automatic indentation
+
+
+
+#multiple condition using elif
+if age <18 : # this has to be true
+    print("You can't vote")
+
+elif age > 60:
+    print("Sr. citizen")
+else:
+    print("You can't vote") # this is automatic indentation
+
+
+#eg:
+
+sal = int(input("Enter yor salary :"))
+if sal > 1000:
+    print(" cond1 ")
+elif sal > 900:
+    print(" cond2 ")
+elif sal > 500:
+    print(" cond3 ")
+elif sal > 300:
+    print(" cond4 ")
+else:
+    print("Job switvh")
+
+
+# Nested condiiton
+sal = int(input("Enter yor salary :"))
+if sal > 1000:
+    print(" cond1 ")
+    if sal > 2000:
+       print(" cond1+1 ")
+       if True: #truthy values
+            print("ENd of execution here")
+    elif sal > 3000:
+        print(" cond1+elif ")
+    elif sal > 4000:
+        print("End of nested conditio")
+    else:
+        print("Too rich")
+elif sal > 900:
+    print(" cond2 ")
+elif sal > 500:
+    print(" cond3 ")
+elif sal > 300:
+    print(" cond4 ")
+else:
+    print("Job switvh")
+
+
+# truthy values
+
+if True: #this is always true
+    print("True")
+else: #code will never reach this
+    print("False")
+    
+    
+#=================================================================
+
+# and condition
+
+# truth table for AND
+# and
+# True  and  True  ==> True
+# False and  True  ==> False
+# True  and  False ==> False
+# False and  False ==> False
+
+
+
+a = 100
+b = 200
+
+if a == 100 and b == 200:
+    print("Both values are correct")
+
+# using else
+
+if a == 100 and b > 200:
+    print("Both values are correct")
+else:
+    print("One value is not correct")
+
+#using elif
+
+if a == 100 and b > 200:
+    print("Both values are correct")
+elif a == 100 and b >= 200:
+    print("inside elif")
+else:
+    print("One value is not correct")
+
+
+
+
+#or
+
+# True  or  True  ==> True
+# False or  True  ==> True
+# True  or  False ==> True
+# False or  False ==> False
+
+
+if a == 100 or  b > 200:
+    print("Either value is coorect")
+elif a == 100 or b >= 200:
+    print("inside elif")
+else:
+    print("Both values are incorrect")
+
+
+
+#hw for students 
+# take some input and validate and print 
+
+# eg for homework
+
+# age = int(input("Enter Age"))
+# if age == 30:
+#     print("You can drive Uber")
+
+
+
+#While loop
+
+i = 1
+j = 5
+while i < j:
+    print(i)
+    i = i + 1
+
+
+
+# Infinite loop ........this will run forever
+
+# initial_speed = 0
+# final_speed = 10
+# while initial_speed <= final_speed:
+#     print("Speed ") # this will run forever
+
+# modified code with termination condition
+# we have to introduce a condition which will end the loop
+# or it will run forever
+
+
+initial_speed = 0
+final_speed = 10
+while initial_speed < final_speed:
+    print("Speed ")
+    initial_speed = initial_speed + 1 # this will increment after every loop
+
+
+#break statement 
+
+
+initial_speed = 0
+final_speed = 10
+count = 1
+while initial_speed < final_speed:
+    print("Speed ")
+    count = count + 1 # this will increment after every loop
+    if count == 5:
+        break #this will end the loop as count become 5
+
+
+i = 1
+j = 5
+while i < j:
+    print(i)
+    i = i + 1
